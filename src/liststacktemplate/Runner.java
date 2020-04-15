@@ -6,7 +6,7 @@
 
 /**
  *
- * @author Paul
+ * @author Ramsey
  */
 public class Runner {
 

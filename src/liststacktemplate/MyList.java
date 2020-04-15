@@ -7,19 +7,27 @@ package liststacktemplate;
 
 /**
  *
- * @author Paul
+ * @author Ramsey
  * @param <T>
  */
 public class MyList<T> {
-
+    private ListNode head;
     /**
-     * get the ith element stored in the list. Note that this does not return
-     * the containing node, but the stored element in the node. Null if D.N.E.
+     * get the ith element stored in the list.Note that this does not return
+ the containing node, but the stored element in the node.Null if D.N.E.
      *
-     * @param i
+     * @param element
      * @return
      */
-    public T get(int i) {
+    public T get(int element) {
+        if (element == 0 && !this.isEmpty()){
+            return (T) head;
+        }else {
+            for(int i = 0; i <= element; i++){
+                //go through the list up to the element and return it
+                
+            }
+        }
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -30,6 +38,8 @@ public class MyList<T> {
      * @return the modified list object
      */
     public MyList<T> add(T v) {
+        ListNode temp = new ListNode(v);
+        ListNode current = head;
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -84,7 +94,7 @@ public class MyList<T> {
      * @return true if list contains at least 1 element, false otherwise.
      */
     public boolean isEmpty() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return head == null;
     }
 
     /**
